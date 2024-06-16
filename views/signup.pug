@@ -1,0 +1,18 @@
+extends layout
+block content
+  #panel2.container
+    form(action="/signup", method="post")
+      .field
+        .control
+          label.label.has-text-white Username
+          input.input.is-info(type="text",name="username",placeholder="username")
+      .field
+        .control
+          label.label.has-text-white Password
+          input.input.is-info(type="password",name="password")
+      .field
+        .control
+          label.label.has-text-white Re-enter Password
+          input.input.is-info(type="password",name="passwordconfirmation")
+          label.has-text-danger= message
+      button.button.is-info Sign in

@@ -1,0 +1,16 @@
+extends layout
+block content
+  #panel2.container
+    .columns.is-3
+      .column.is-half.has-background-grey.has-text-centered= col1text
+        
+      .column.is-half.has-background-grey.has-text-centered
+        .tile.is-vertical
+          each playlist in playlists
+            .buttons
+              a.button.btnadd.is-primary(href=`/songsearch/${playlist}`) Add Songs
+              a.button.btndelplay.is-danger(href=`/deleteplaylist/${playlist}`) Delete Playlist
+            a.tile.is-primary.box(href=`/player/${playlist}`)= playlist
+          else
+            div No Playlists
+          a.button.is-warning(href=`/newplaylist`) Add New Playlist

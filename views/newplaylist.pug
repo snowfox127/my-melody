@@ -1,0 +1,10 @@
+extends layout
+block content
+  #panel2.container
+    form(action="/addplaylist", method="post")
+      .field
+        .control
+          label.label.has-text-white New Playlist
+          input.input.is-info(type="text",name="newplaylist",placeholder="Playlist Name")
+          label.has-text-danger= message
+      button.button.is-info Create Playlist

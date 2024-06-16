@@ -1,0 +1,102 @@
+#mainpanel {
+    padding: 0.5rem 2rem;
+}
+
+body {
+    background-image: url("../images/pines.jpg");
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+#panel2 {
+    position: relative;
+    height: auto;
+    min-height: 75vh;
+    margin: 2rem 1rem;
+}
+
+.playcontrols > button {
+    display: inline-block;
+    margin: 5%;
+}
+
+.playcontrols {
+    background-color: black;
+    border-radius: 20px;
+    border: 2em;
+}
+
+.songtitle {
+    display: inline-block;
+    margin: 0 5%;
+    font-size: large;
+    font-weight: bold;
+}
+
+.btnsongplay {
+    display: inline-block;
+    margin: 0 5%;
+}
+
+#songbar {
+    margin-top: 2em;
+}
+
+.btnadd {
+    width: 49%;
+}
+.btndelplay {
+    width: 49%;
+}
+
+.rectext {
+    padding: 1em;
+    background-color: white;
+}
+
+.msgtext {
+    padding: 1em;
+    background-color: white;
+}
+
+#usersname {
+    font-size: 3em;
+    font-weight: bolder;
+    padding: 0.3em;
+    border-radius: 0.2em;
+    margin: 0.4em;
+}
+
+#reclist {
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.msgsection {
+    margin: 0.4em;
+}
+
+#msgInput {
+    display: inline-block;
+    width: 75%;
+    margin-right: auto;
+}
+
+#btnMsg {
+    display: inline-block;
+}
+
+#indexPage{
+    padding: 2em;
+}
+
+#instructions{
+    text-align: left;
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+#bigtitleheader{
+    padding: 1em;
+    background-color: rgb(179, 13, 13);
+}

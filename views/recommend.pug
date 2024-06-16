@@ -1,0 +1,13 @@
+extends layout
+block content
+  script(type="text/javascript" src="/scripts/socketio/socket.io.js")
+  script(src="/scripts/recommend.js")
+  #panel2.container
+    .columns.is-3
+      .column.is-half.has-background-grey.has-text-centered
+        #usersname.has-text-warning.has-background-primary= username
+        .msgsection
+          input.input.is-primary#msgInput(type="text",placeholder="message")
+          button.button.is-primary#btnMsg Message
+      .column.is-half.has-background-grey.has-text-centered
+        #reclist

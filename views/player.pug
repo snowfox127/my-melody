@@ -1,0 +1,29 @@
+extends layout
+block content
+  script(type="text/javascript" src="/scripts/socketio/socket.io.js")
+  script(src="/scripts/configuration.js")
+  script(src="/scripts/youtube.js")
+  script(src="/scripts/player.js")
+  #panel2.container
+    .columns.is-3
+      .column.is-half.has-background-grey.has-text-centered= col1text
+        #usersname.has-text-warning.has-background-primary= username
+        #visual
+        iframe#video(width="0" height="0" src=`//www.youtube.com/embed/${songs[0]}?enablejsapi=1&html5=1?autoplay=0&rel=0` frameborder="0")
+        .playcontrols
+          button.button.is-info#btnprev Prev
+          button.button.is-info#btnnext Next
+          button.button.is-info#btnplay Play
+          button.button.is-info#btnpause Pause
+        progress.progress.is-primary#songbar(value="0" max="100")
+      .column.is-half.has-background-grey.has-text-centered
+        .block.has-background-primary= playlistname
+        //important, keep block seperate
+        .block.allsongs
+          each song in songs
+              .notification.is-success.song(id=`${song}`)
+                span.songtitle
+                button.button.is-warning.btnsongplay Play
+                button.button.btnRecommend Recommend
+                a.delete.is-small(href=`/delete/${playlistname}/${song}`)
+              

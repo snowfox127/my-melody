@@ -1,0 +1,15 @@
+extends layout
+block content
+  script(src="/scripts/configuration.js")
+  script(src="/scripts/youtube.js")
+  script(src="/scripts/songsearch.js")
+  #panel2.container
+    .columns.is-3
+      .column.is-half.has-background-grey.has-text-centered
+        h1.title#playname= playlistname
+        input.input#query
+        button.button.is-info#searchButton Search
+      .column.is-half.has-background-grey.has-text-centered
+        #listview
+
+
